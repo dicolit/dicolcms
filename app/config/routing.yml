@@ -10,6 +10,10 @@ contact:
     resource: "@ContactBundle/Controller/"
     type:     annotation
 
+item:
+    resource: "@ItemBundle/Controller/"
+    type:     annotation
+
 app:
     resource: "@AppBundle/Controller/"
     type:     annotation
