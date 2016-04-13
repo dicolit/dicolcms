@@ -1,9 +1,33 @@
 {% extends '@front/base.html.twig' %}
 
-{% block body %}
+
+
+{% block page_content %}
+    <style>
+        .navbar-wrapper {
+            position: inherit;
+        }
+    </style>
     {% include '@front/partials/header.html.twig' %}
-    {% block page_content %}
-        <div>Page content</div>
-    {% endblock %}
-    {% include '@front/partials/footer.html.twig' %}
+
+
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing">
+        {% block content %}
+
+        {% endblock %}
+
+
+
+
+        {% include '@front/partials/footer.html.twig' %}
+
+    </div><!-- /.container -->
+
 {% endblock %}
+
+{% block javascripts %}{% endblock %}

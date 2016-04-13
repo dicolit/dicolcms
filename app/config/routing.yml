@@ -2,6 +2,14 @@ user:
     resource: "@UserBundle/Controller/"
     type:     annotation
 
+page:
+    resource: "@PageBundle/Controller/"
+    type:     annotation
+
+contact:
+    resource: "@ContactBundle/Controller/"
+    type:     annotation
+
 app:
     resource: "@AppBundle/Controller/"
     type:     annotation
