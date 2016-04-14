@@ -18,7 +18,8 @@ class FaqController extends Controller
             $faq_list[] = (object) array(
                 'id' => $i,
                 'title' => 'Title '.$i,
-                'href' => '/item/'.$i,
+                'summary'=>'Summary .... '.$i,
+                'href' => '/faq/'.$i,
             );
         }
         return $this->render(

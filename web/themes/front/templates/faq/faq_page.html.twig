@@ -1,0 +1,59 @@
+{% extends '@front/page.html.twig' %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block stylesheets %}{% endblock %}
+{% block content %}
+    <div class="row">
+        <div class="col-lg-12">
+            <h1>FAQs</h1>
+            <hr>
+            <a class="btn btn-success" href="{{ path('faq_submit_page') }}">
+                <i class="glyphicon glyphicon-plus"></i> Add new Question
+            </a>
+            <hr>
+            <div class="panel-group" id="accordionFaq" role="tablist" aria-multiselectable="true">
+                {% for item in faq_list %}
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingFaq_{{ item.id }}">
+                        <h4 class="panel-title">
+                            <a role="button" data-toggle="collapse" data-parent="#accordionFaq" href="#faq_{{ item.id }}" aria-expanded="true" aria-controls="faq_{{ item.id }}">
+                                {{ item.title }}
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="faq_{{ item.id }}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="faq_{{ item.id }}">
+                        <div class="panel-body">
+                            <div>
+                            {{ item.summary }}
+                            </div>
+                            <div>
+                                <a href="{{ item.href }}">View detail...</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <hr>
+            <ul class="pager">
+                <li><a href="#">Last</a></li>
+                <li><a href="#">Previous</a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li>.....</li>
+                <li><a href="#">11</a></li>
+                <li><a href="#">12</a></li>
+                <li><span>13</span></li>
+                <li><a href="#">14</a></li>
+                <li><a href="#">15</a></li>
+                <li><a href="#">Next</a></li>
+                <li><a href="#">First</a></li>
+            </ul>
+
+        </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <!-- /END THE FEATURETTES -->
+{% endblock %}
+{% block javascripts %}{% endblock %}
