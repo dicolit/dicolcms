@@ -8,14 +8,17 @@ use Symfony\Component\HttpFoundation\Request;
 
 class ContactController extends Controller
 {
-  /**
-   * @Route("/contact", name="contact_page")
-   */
-  public function contactAction(Request $request)
-  {
-    return $this->render('@front/contact/contact_page.html.twig', array(
-      'page_title'=>'Contact'
-    ));
-  }
+    /**
+     * @Route("/contact", name="contact_page")
+     */
+    public function contactAction(Request $request)
+    {
+        return $this->render(
+            '@front/contact/contact_page.html.twig',
+            array(
+                'page_title' => 'Contact',
+            )
+        );
+    }
 
 }
