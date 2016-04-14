@@ -35,8 +35,8 @@ twig:
     debug:            "%kernel.debug%"
     strict_variables: "%kernel.debug%"
     paths:
-          "%kernel.root_dir%/../web/themes/front/templates/": front
-          "%kernel.root_dir%/../web/themes/admin/templates/": admin
+          "%kernel.root_dir%/../themes/front/templates/": front
+          "%kernel.root_dir%/../themes/admin/templates/": admin
 
 # Doctrine Configuration
 doctrine:
