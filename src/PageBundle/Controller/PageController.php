@@ -8,6 +8,20 @@ use Symfony\Component\HttpFoundation\Request;
 
 class PageController extends Controller
 {
+
+    /**
+     * @Route("/page/{id}", name="page_detail_page")
+     */
+    public function pageDetailAction(Request $request)
+    {
+        return $this->render(
+            '@front/page/page_detail_page.html.twig',
+            array(
+                'page_title' => 'Page Detail',
+            )
+        );
+    }
+
     /**
      * @Route("/about", name="about_page")
      */

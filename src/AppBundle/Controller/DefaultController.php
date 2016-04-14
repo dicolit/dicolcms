@@ -26,6 +26,7 @@ class DefaultController extends Controller
      */
     public function customAction(Request $request)
     {
+
         $response = $this->forward(
             'AppBundle:Default:home',
             array(
